@@ -4,6 +4,7 @@
     <title>FIFA Tournament</title>
     <meta charset="utf-8"/></meta>
     <link rel="stylesheet" href="../css/comum.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
   </head>
   <body>
     <div id="logo">
@@ -14,8 +15,13 @@
     </div>
     <div id="login">
       Usuário: <input id="usuario"/><br/>
-      Senha: <input type="password"/><input type="button" value="Login"/><br/>
+      Senha: <input id="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
       <a href="cadastro.html">Cadastre-se</a>
     </div>
+    <div id="logado" class="escondido">
+      Bem-vindo, <span id="nomeusuario"></span>.<br/>
+      <input id="botao-logout" type="button" value="Logout"/><br/>
+    </div>
+    <script src="../js/index.js"></script>
   </body>
 </html>

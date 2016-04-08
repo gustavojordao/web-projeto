@@ -12,26 +12,32 @@
 
     <div id="texto">
       Nome do campeonato: <input id="nome"/><br/>
-      Número de participantes: <input id="numero"/><br/>
+      Número de participantes: <input id="numero" value="2" disabled="true"/>
       <div id="botoes-numero">
-        <input id="numero-up" type="button" value="^"/>
-        <input id="numero-down" type="button" value="v"/>
+        <input id="numero-up" type="button" value="+"/>
+        <input id="numero-down" type="button" value="-"/>
+      </div>
+
+      <div id="add-times">
+        Times não adicionados <br/>
+        <span><input id="chkTime1" class="time" type="checkbox" value="time1"/>Time 1</span>
+        <span><input id="chkTime2" class="time" type="checkbox" value="time2"/>Time 2</span>
+        <span><input id="chkTime3" class="time" type="checkbox" value="time3"/>Time 3</span>
+        <span><input id="chkTime4" class="time" type="checkbox" value="time4"/>Time 4</span>
+        <span><input id="chkTime5" class="time" type="checkbox" value="time5"/>Time 5</span>
+        <span><input id="chkTime6" class="time" type="checkbox" value="time6"/>Time 6</span>
+        <span><input id="chkTime7" class="time" type="checkbox" value="time7"/>Time 7</span>
+        <span><input id="chkTime8" class="time" type="checkbox" value="time8"/>Time 8</span>
+      </div>
+
+      <div id="ja-adicionados">
+        <br/>
+        Times adicionados <br/>
       </div>
       <button>Próximo</button>
     </div>
 
-    <div id="add-times">
-      <input id="chkTime1" type="checkbox"/> Time 1 <br/>
-      <input id="chkTime2" type="checkbox"/> Time 2 <br/>
-      <input id="chkTime3" type="checkbox"/> Time 3 <br/>
-    </div>
 
-    <div id="ja-adicionados">
-      <input id="chkTime1" type="checkbox"/> Time 4 <br/>
-      <input id="chkTime2" type="checkbox"/> Time 5 <br/>
-      <input id="chkTime3" type="checkbox"/> Time 6 <br/>
-      Quando clicar acionar o checkbox, a opcao aparece na div dos times a serem adicionados.
-    </div>
-
+    <script src="../js/novo-campeonato.js"></script>
   </body>
 </html>
