@@ -1,3 +1,31 @@
-div{
+header{
+  text-align: center;
+  font-size: 10em;
+  width: 1000px;
+  height: 200px;
   border: solid;
+  display: block;
+  align: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+article{
+  width: 1000px;
+  height: 1200px;
+  border: solid;
+  display: block;
+  align: center;
+  box-sizing: border-box;
+
+}
+
+body{
+  border: solid;
+  padding: 100px 100px;
+  width: 1200px;
+  height: 1600px;
+  box-sizing: border-box;
+  margin: 100px auto;
+  background-image: "../img/fundo.png";
 }
