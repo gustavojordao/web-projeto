@@ -8,6 +8,8 @@ header{
   align: center;
   box-sizing: border-box;
   margin-bottom: 20px;
+  background-image: url(../img/fundo_logo.jpg);
+  font-family: "myFirstFont";
 }
 
 article{
@@ -17,8 +19,9 @@ article{
   display: block;
   align: center;
   box-sizing: border-box;
-
+  font-family: "myFirstFont";
 }
+
 
 body{
   border: solid;
@@ -27,5 +30,14 @@ body{
   height: 1600px;
   box-sizing: border-box;
   margin: 100px auto;
-  background-image: "../img/fundo.png";
+  background-image: url(../img/fundo2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "myFirstFont";
 }
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(../fonts/EASPORTS15.tff);
+}
+

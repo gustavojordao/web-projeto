@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="../css/novo-campeonato.css"/>
   </head>
   <body>
-    <div id="logo">
+    <header id="logo">
+		<img src="../img/logo.png"/>
+    </header>
 
-    </div>
-
-    <div id="texto">
+    <article id="texto">
       Nome do campeonato: <input id="nome"/><br/>
       Número de participantes: <input id="numero" value="2" disabled="true"/>
-      <div id="botoesnumero">
+      <section id="botoesnumero">
         <input id="numero-up" type="button" value="+"/>
         <input id="numero-down" type="button" value="-"/>
-      </div>
+      </section>
 
-      <div id="add-times">
+      <section id="add-times">
         Times não adicionados <br/>
         <span><input id="chkTime1" class="time" type="checkbox" value="time1"/>Time 1</span>
         <span><input id="chkTime2" class="time" type="checkbox" value="time2"/>Time 2</span>
@@ -29,14 +29,14 @@
         <span><input id="chkTime6" class="time" type="checkbox" value="time6"/>Time 6</span>
         <span><input id="chkTime7" class="time" type="checkbox" value="time7"/>Time 7</span>
         <span><input id="chkTime8" class="time" type="checkbox" value="time8"/>Time 8</span>
-      </div>
+      </section>
 
-      <div id="ja-adicionados">
+      <section id="ja-adicionados">
         <br/>
         Times adicionados <br/>
-      </div>
+      </section>
       <button id="botaocriar">Criar</button>
-    </div>
+    </article>
 
 
     <script src="../js/novo-campeonato.js"></script>
