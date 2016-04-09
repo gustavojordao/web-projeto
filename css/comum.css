@@ -3,6 +3,11 @@
   src: url(../fonts/EASPORTS15.ttf);
 }
 
+@font-face{
+  font-family: flash;
+  src: url(../fonts/flashrogers.ttf);
+}
+
 .border{
 	border-radius: 10px 10px 10px 10px;
 	border: 0px solid #000000;
@@ -11,20 +16,30 @@
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);	
 }
 
+.menu{
+  display: flex;
+  left: 0px;
+  right: 0px;
+}
+
+.menuitem{
+  flex: 1;
+  text-align: center;
+}
+
 header{
   text-align: center;
   font-size: 10em;
-  width: 1000px;
-  height: 200px;
-  border: solid;
-  display: block;
-  align: center;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-image: url(../img/fundo_logo.jpg);
-  font-family: ea;
+  font-family: flash;
   color: #FFFFF0;
-  
+
+}
+
+header img{
+	position: relative;
 }
 
 article{
@@ -35,23 +50,23 @@ article{
   border: solid;
   display: block;
   box-sizing: border-box;
-  font-family: ea;
+  font-family: flash;
   color: #FFFFF0;
   background-color:rgba(28, 28, 28, 0.8);
 }
 
 
 body{
-  border: solid;
-  padding: 100px 100px;
+  /* border: solid;  */
+  padding: 100px 100px 100px 100px;
   width: 1200px;
-  height: 800px;
+  height: 700px;
   box-sizing: border-box;
-  margin: 100px auto;
+  margin: 0px auto;
   background-image: url(../img/fundo2.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  font-family: ea;
+  font-family: flash;
   color: #FFFFF0;
 }
 
