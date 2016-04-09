@@ -13,10 +13,10 @@
 	border: 0px solid #000000;
 
 	border: 0px solid #080808;
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);	
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.menu{
+nav{
   display: flex;
   left: 0px;
   right: 0px;
@@ -25,6 +25,21 @@
 .menuitem{
   flex: 1;
   text-align: center;
+}
+
+.menuvert{
+  display: flex;
+  flex-direction: column;
+}
+
+.oculto{
+  display: none;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  float: left;
 }
 
 header{
@@ -42,6 +57,10 @@ header img{
 	position: relative;
 }
 
+section{
+  position: relative;
+}
+
 article{
   position: absolute;
   padding: 50px;
@@ -54,7 +73,6 @@ article{
   color: #FFFFF0;
   background-color:rgba(28, 28, 28, 0.8);
 }
-
 
 body{
   /* border: solid;  */
@@ -69,5 +87,3 @@ body{
   font-family: flash;
   color: #FFFFF0;
 }
-
-

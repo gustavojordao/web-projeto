@@ -7,21 +7,44 @@
     <link rel="stylesheet" href="../css/index.css"/>
   </head>
   <body>
-    <div id="logo">
-		<img src="../img/logo.png"/>
-    </div>
-    <div id="texto">
-
-    </div>
-    <div id="login">
+    <header>
+		  <img src="../img/logo.png"/>
+    </header>
+    <nav class="menu">
+      <section class="menuitem">
+        Página Inicial
+      </section>
+      <section class="menuitem">
+        Campeonatos
+      </section>
+      <section class="menuitem">
+        Times
+      </section>
+      <nav class="menuitem menuvert">
+        <section class="menuitem">
+          Perfil
+        </section>
+        <section class="menuitem oculto">
+          Criar campeonato
+        </section>
+        <section class="menuitem oculto">
+          Meus campeonatos
+        </section>
+      </nav>
+    </nav>
+    <article>
+      asdfg
+    </article>
+    <section id="login">
       Usuário: <input id="usuario"/><br/>
       Senha: <input id="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
       <a href="cadastro.html">Cadastre-se</a>
-    </div>
-    <div id="logado" class="escondido">
+    </section>
+    <section id="logado" class="oculto">
       Bem-vindo, <span id="nomeusuario"></span>.<br/>
       <input id="botao-logout" type="button" value="Logout"/><br/>
-    </div>
+    </secion>
     <script src="../js/index.js"></script>
+    <script src="../js/comum.js"></script>
   </body>
 </html>

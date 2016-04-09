@@ -1,0 +1,11 @@
+article{
+  display: flex;
+  flex-direction: column;
+  /*
+  adicionar espaçamento entre objetos do flex (secion)
+  */
+}
+
+section{
+  flex: 1;
+}

@@ -9,12 +9,38 @@
     <header>
       Libertadêro
     </header>
+    <nav class="menu">
+      <section class="menuitem">
+        Página Inicial
+      </section>
+      <section class="menuitem">
+        Campeonatos
+      </section>
+      <section class="menuitem">
+        Times
+      </section>
+      <nav class="menuitem menuvert">
+        <section class="menuitem">
+          Perfil
+        </section>
+        <section class="menuitem oculto">
+          Criar campeonato
+        </section>
+        <section class="menuitem oculto">
+          Meus campeonatos
+        </section>
+      </nav>
+    </nav>
     <article>
+      <input id="mostraimagem" class="avatar" type="image" src="../img/perfil.png"/>
+      <input id="imagem" type="file" accept="image"/>
       Nome: <input id="nome"/><br/>
       E-mail: <input id="email"/><br/>
-      Senha: <input id="senha"/><br/>
-      Confirmação de senha: <input id="confirmacao"/><br/>
-      <button>Cadastrar</button>
+      Senha: <input id="senha" type="password"/><br/>
+      Confirmação de senha: <input id="confirmacao" type="password"/><br/>
+      <button id="botaocadastro">Cadastrar</button>
     </article>
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/comum.js"></script>
   </body>
 </html>
