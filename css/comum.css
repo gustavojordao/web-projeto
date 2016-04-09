@@ -1,3 +1,20 @@
+@font-face{
+  font-family: ea;
+  src: url(../fonts/EASPORTS15.ttf);
+}
+
+.border{
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #000000;
+
+	border: 0px solid #080808;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);	
+}
+
 header{
   text-align: center;
   font-size: 10em;
@@ -9,17 +26,22 @@ header{
   box-sizing: border-box;
   margin-bottom: 20px;
   background-image: url(../img/fundo_logo.jpg);
-  font-family: "myFirstFont";
+  font-family: ea;
+  color: #FFFFF0;
+  
 }
 
 article{
+  position: absolute;
+  padding: 50px;
   width: 1000px;
-  height: 1200px;
+  height: 300px;
   border: solid;
   display: block;
-  align: center;
   box-sizing: border-box;
-  font-family: "myFirstFont";
+  font-family: ea;
+  color: #FFFFF0;
+  background-color:rgba(28, 28, 28, 0.8);
 }
 
 
@@ -27,17 +49,14 @@ body{
   border: solid;
   padding: 100px 100px;
   width: 1200px;
-  height: 1600px;
+  height: 800px;
   box-sizing: border-box;
   margin: 100px auto;
   background-image: url(../img/fundo2.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  font-family: "myFirstFont";
+  font-family: ea;
+  color: #FFFFF0;
 }
 
-@font-face {
-   font-family: myFirstFont;
-   src: url(../fonts/EASPORTS15.tff);
-}
 
