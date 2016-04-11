@@ -9,3 +9,8 @@ article{
 section{
   flex: 1;
 }
+
+.botao{
+  width: 20px;
+  height: 20px;
+}

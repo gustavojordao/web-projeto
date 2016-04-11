@@ -11,39 +11,41 @@
 		  <img src="../img/logo.png"/>
     </header>
     <nav class="menu">
-      <section class="menuitem">
+      <section id="inicial" class="menuitem">
         Página Inicial
       </section>
-      <section class="menuitem">
+      <section id="campeonatos" class="menuitem">
         Campeonatos
       </section>
-      <section class="menuitem">
+      <section id="times" class="menuitem">
         Times
       </section>
       <nav class="menuitem menuvert">
-        <section class="menuitem">
+        <section id="perfil" class="menuitem">
           Perfil
         </section>
-        <section class="menuitem oculto">
+        <section id="criar-campeonato" class="menuitem oculto">
           Criar campeonato
         </section>
-        <section class="menuitem oculto">
-          Meus campeonatos
+        <section id="cadastrar" class="menuitem oculto">
+          Cadastrar
         </section>
       </nav>
     </nav>
     <article>
-      asdfg
+      Este site permite o gerenciamento de campeonatos de FIFA.
     </article>
-    <section id="login">
-      Usuário: <input id="usuario"/><br/>
-      Senha: <input id="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
-      <a href="cadastro.html">Cadastre-se</a>
+    <section id=login>
+      <section id="antes">
+        Usuário: <input id="usuario"/><br/>
+        Senha: <input id="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
+        <a href="cadastro.html">Cadastre-se</a>
+      </section>
+      <section id="depois" class="oculto">
+        Bem-vindo, <span id="nomeusuario"></span>.<br/>
+        <input id="botao-logout" type="button" value="Logout"/><br/>
+      </secion>
     </section>
-    <section id="logado" class="oculto">
-      Bem-vindo, <span id="nomeusuario"></span>.<br/>
-      <input id="botao-logout" type="button" value="Logout"/><br/>
-    </secion>
     <script src="../js/index.js"></script>
     <script src="../js/comum.js"></script>
   </body>

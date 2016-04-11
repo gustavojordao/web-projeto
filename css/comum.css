@@ -8,6 +8,12 @@
   src: url(../fonts/flashrogers.ttf);
 }
 
+#login{
+  float: right;
+  border: solid;
+  position: static;
+}
+
 .border{
 	border-radius: 10px 10px 10px 10px;
 	border: 0px solid #000000;
@@ -40,6 +46,14 @@ nav{
   width: 100px;
   height: 100px;
   float: left;
+}
+
+table, td, th{
+  border: solid;
+}
+
+td{
+  text-align: right;
 }
 
 header{
