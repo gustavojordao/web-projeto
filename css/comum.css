@@ -48,6 +48,11 @@ nav{
   float: left;
 }
 
+.botao{
+  width: 20px;
+  height: 20px;
+}
+
 table, td, th{
   border: solid;
 }
@@ -86,6 +91,9 @@ article{
   font-family: flash;
   color: #FFFFF0;
   background-color:rgba(28, 28, 28, 0.8);
+
+  display: flex;
+  flex-direction: row;
 }
 
 body{
