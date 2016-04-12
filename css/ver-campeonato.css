@@ -1,6 +1,12 @@
 #concluido{
   background-color: green;
   height: 20px;
+  padding: 0px;
+  display: static;
+  margin: 0px;
+  min-width: 0px;
+  min-height: 20px;
+
 }
 
 #barra{
@@ -9,4 +15,8 @@
   width: 100px;
   height: 20px;
   text-align: center;
+  padding: 0px;
+  display: static;
+  min-width: 100px;
+  min-height: 20px;
 }

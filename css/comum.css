@@ -1,7 +1,4 @@
-@font-face{
-  font-family: ea;
-  src: url(../fonts/EASPORTS15.ttf);
-}
+@import url(https://fonts.googleapis.com/css?family=Fontdiner+Swanky);
 
 @font-face{
   font-family: flash;
@@ -14,14 +11,6 @@
   position: static;
 }
 
-.border{
-	border-radius: 10px 10px 10px 10px;
-	border: 0px solid #000000;
-
-	border: 0px solid #080808;
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
 nav{
   display: flex;
   left: 0px;
@@ -31,6 +20,7 @@ nav{
 .menuitem{
   flex: 1;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .menuvert{
@@ -53,8 +43,22 @@ nav{
   height: 20px;
 }
 
+.ladoalado{
+  display: flex;
+  flex-direction: row;
+}
+
+.ladoalado section{
+  padding: 10px;
+  min-width: 250px;
+  min-height: 200px;
+  display: block;
+  margin: auto auto;
+}
+
 table, td, th{
   border: solid;
+  border-collapse: collapse;
 }
 
 td{
@@ -63,12 +67,18 @@ td{
 
 header{
   text-align: center;
-  font-size: 10em;
+  font-size: 4em;
   box-sizing: border-box;
   margin-bottom: 30px;
   background-image: url(../img/fundo_logo.jpg);
-  font-family: flash;
+  font-family: "Fontdiner Swanky";
   color: #FFFFF0;
+
+  border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+
+  border: 0px solid #080808;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
 }
 
@@ -84,11 +94,11 @@ article{
   position: absolute;
   padding: 50px;
   width: 1000px;
-  height: 300px;
+  height: 400px;
   border: solid;
   display: block;
   box-sizing: border-box;
-  font-family: flash;
+  font-family: "Fontdiner Swanky";
   color: #FFFFF0;
   background-color:rgba(28, 28, 28, 0.8);
 }
@@ -102,7 +112,15 @@ body{
   margin: 0px auto;
   background-image: url(../img/fundo2.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  font-family: flash;
+  background-size: auto auto;
+  font-family: "Fontdiner Swanky";
   color: #FFFFF0;
+}
+
+a:visited{
+  color: red;
+}
+
+a:link{
+  color: green;
 }
