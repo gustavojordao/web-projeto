@@ -1,0 +1,23 @@
+{
+  "name": "web-projeto",
+  "version": "1.0.0",
+  "description": "Projeto final da disciplina de Programação WEB",
+  "main": "app.js",
+  "scripts": {
+    "test": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavojordao/web-projeto.git"
+  },
+  "author": "Gustavo Jordão Nunes e Laís Ribeiro Matos Loureiro de Carvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavojordao/web-projeto/issues"
+  },
+  "homepage": "https://github.com/gustavojordao/web-projeto#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "hbs": "^4.0.0"
+  }
+}
