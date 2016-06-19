@@ -15,7 +15,8 @@ function init(){
     { id: "campeonatos", link: "/campeonatos" },
     { id: "perfil", link: "/perfil" },
     { id: "criar-campeonato", link: "/novo-campeonato" },
-    { id: "cadastrar", link: "/cadastro" }
+    { id: "cadastrar", link: "/cadastro" },
+    { id: "botao-login", link: "/login" }
   ];
 
   for(i=0; i<submenus.length; i++){
@@ -77,12 +78,26 @@ function init(){
   var logindiv = document.getElementById('antes');
   var logadodiv = document.getElementById('depois');
 
+  var loginform = document.getElementById('loginform');
+
   botaologin.addEventListener('click',
     function(e){
-      if(usuario.value && password.value){
-        logindiv.classList.add('oculto');
-        logadodiv.classList.remove('oculto');
-        document.getElementById('nomeusuario').innerHTML = usuario.value;
+      for(var i=0; i<links.length; i++){
+        if(links[i].id == e.target.id){
+          /*//AJAX
+            var loginRequest = new XMLHttpRequest();
+            loginRequest.onreadysatechange = function(){
+            if(loginRequest.readyState == 4 && loginRequest.status == 200){
+
+            }
+          }
+          loginRequest.open('POST', links[i].link, true);
+          loginRequest.send();*/
+          //window.open(links[i].link + '.html', '_self');
+          loginform.method = "POST";
+          loginform.action = links[i].link;
+          loginform.submit();
+        }
       }
     }
   );

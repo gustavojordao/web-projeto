@@ -26,8 +26,8 @@
     <article class="ladoalado">
       <section>
         <img class="avatar" src="../img/allejo.jpg" alt="Avatar"/>
-        Nome: Allejo <br/>
-        E-mail: allejo@superstarsoccer.com <br/>
+        Nome: {{nome}} <br/>
+        E-mail: {{email}} <br/>
       </section>
 
       <section id="campeonatos">
@@ -42,13 +42,15 @@
             </tr>
           </thead>
           <tbody>
+            {{#each campeonatos}}
             <tr>
-              <td>Campeonato 1</td>
-              <td>4</td>
-              <td>0</td>
-              <td>-</td>
+              <td>{{nome}}</td>
+              <td>{{num_participantes}}</td>
+              <td>{{prc_concluido}}</td>
+              <td>{{vencedor}}</td>
             </tr>
-            <tr>
+            {{/each}}
+            <!--<tr>
               <td>Campeonato 2</td>
               <td>8</td>
               <td>25</td>
@@ -65,7 +67,7 @@
               <td>64</td>
               <td>50</td>
               <td>-</td>
-            </tr>
+            </tr>-->
           </tbody>
         </table>
       </section>

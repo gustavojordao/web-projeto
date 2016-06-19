@@ -27,15 +27,17 @@
       Este site permite o gerenciamento de campeonatos de FIFA.
     </article>
     <section id=login>
-      <section id="antes">
-        Usuário: <input id="usuario"/><br/>
-        Senha: <input id="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
-        <a href="cadastro.html">Cadastre-se</a>
-      </section>
-      <section id="depois" class="oculto">
-        Bem-vindo, <span id="nomeusuario"></span>.<br/>
-        <input id="botao-logout" type="button" value="Logout"/><br/>
-      </secion>
+      <form id="loginform" name="loginform" method="GET">
+        <section id="antes">
+          Usuário: <input id="usuario" name="usuario"/><br/>
+          Senha: <input id="password" name="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
+          <a href="cadastro.html">Cadastre-se</a>
+        </section>
+        <section id="depois" class="oculto">
+          Bem-vindo, <span id="nomeusuario"></span>.<br/>
+          <input id="botao-logout" type="button" value="Logout"/><br/>
+        </secion>
+      </form>
     </section>
     <script src="../js/comum.js"></script>
   </body>
