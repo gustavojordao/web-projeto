@@ -176,3 +176,18 @@ a:link{
 input[type="hidden"] {
   display: none;
 }
+
+.bola{
+  animation: girando 3s 0s infinite alternate;
+}
+@keyframes girando {
+  from { opacity: 0.0;}
+  to   { transform: rotate(600deg);
+          opacity: 1.0;}
+}
+
+#bola {
+  position: absolute;
+  right: 0px;
+  top: 400px;
+}

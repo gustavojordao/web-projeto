@@ -469,3 +469,11 @@ app.post('/deletarjogo',
     //request.session.campeonato = undefined;
   }
 );
+
+app.get('/pong',
+  function(request, response){
+
+    response.render('pong.hbs');
+    //request.session.campeonato = undefined;
+  }
+);
