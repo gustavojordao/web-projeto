@@ -9,6 +9,11 @@
     <header>
 		  <img src="../img/logo.png"/> LIBERTADÊRO
     </header>
+    {{#if error}}
+      <section class="messagebar error">
+        {{error}}
+      </section>
+    {{/if}}
     <nav>
       <form id="menu" name="menu" method="GET">
         <section id="inicial" class="menuitem">
@@ -23,13 +28,20 @@
       </form>
     </nav>
     <article>
-      <input id="mostraimagem" class="avatar" type="image" src="../img/perfil.png"/>
-      <input id="imagem" type="file" accept="image"/>
-      Nome: <input id="nome"/><br/>
-      E-mail: <input id="email"/><br/>
-      Senha: <input id="senha" type="password"/><br/>
-      Confirmação de senha: <input id="confirmacao" type="password"/><br/>
-      <button id="botaocadastro">Cadastrar</button>
+      <form id="cadastroform" name="cadastroform">
+        <section>
+          <input id="mostraimagem" class="avatar" type="image" src="../img/perfil.png"/>
+          <input id="imagem" name="imagem" type="file" accept="image"/>
+        </section>
+        <section>
+          Nome de usuário: <input id="usuario" name="usuario"/><br/>
+          Nome: <input id="nome" name="nome"/><br/>
+          E-mail: <input id="email" name="email"/><br/>
+          Senha: <input id="senha" name="senha" type="password"/><br/>
+          Confirmação de senha: <input id="confirmacao" name="confirmacao" type="password"/><br/>
+        </section>
+        <button id="botaocadastro">Cadastrar</button>
+      </form>
     </article>
     <script src="../js/cadastro.js"></script>
     <script src="../js/comum.js"></script>

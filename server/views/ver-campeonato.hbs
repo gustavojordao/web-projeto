@@ -27,14 +27,9 @@
       <section>
         Participantes
         <ul>
-          <li>Cruzeiro</li>
-          <li>Atlético-MG</li>
-          <li>América-MG</li>
-          <li>São Paulo</li>
-          <li>Corinthians</li>
-          <li>Palmeiras</li>
-          <li>Grêmio</li>
-          <li>Internacional</li>
+          {{#each campeonato.times}}
+          <li>{{this}}</li>
+          {{/each}}
         </ul>
       </section>
       <section>
@@ -57,54 +52,28 @@
             </tr>
           </thead>
           <tbody>
+            {{#each campeonato.jogos}}
             <tr>
               <td>
-                Cruzeiro
+                {{time1}}
               </td>
               <td>
-                6x1
+                {{placarTime1}}x{{placarTime2}}
               </td>
               <td>
-                Atlético-MG
+                {{time2}}
               </td>
               <td>
-                Final
+                {{fase}}
               </td>
             </tr>
-            <tr>
-              <td>
-                Cruzeiro
-              </td>
-              <td>
-                3x1
-              </td>
-              <td>
-                América-MG
-              </td>
-              <td>
-                Semifinal
-              </td>
-            </tr>
-            <tr>
-              <td>
-                São Paulo
-              </td>
-              <td>
-                0x1
-              </td>
-              <td>
-                Cruzeiro
-              </td>
-              <td>
-                Quartas-de-final
-              </td>
-            </tr>
+            {{/each}}
           </tbody>
         </table>
       </section>
       <section>
-        <input id="partidasconcluidas" type="hidden" value="4"/>
-        <input id="numtimes" type="hidden" value="8"/>
+        <input id="partidasconcluidas" type="hidden" value="{{campeonato.jogos.length}}"/>
+        <input id="numtimes" type="hidden" value="{{campeonato.times.length}}"/>
 
         Concluído
         <section id="barra">
@@ -114,17 +83,6 @@
         </section>
       </section>
     </article>
-    <section id=login>
-      <section id="antes">
-        Usuário: <input id="usuario"/><br/>
-        Senha: <input id="password" type="password"/><input id="botao-login" type="button" value="Login"/><br/>
-        <a href="cadastro.html">Cadastre-se</a>
-      </section>
-      <section id="depois" class="oculto">
-        Bem-vindo, <span id="nomeusuario"></span>.<br/>
-        <input id="botao-logout" type="button" value="Logout"/><br/>
-      </secion>
-    </section>
     <script src="../js/ver-campeonato.js"></script>
     <script src="../js/comum.js"></script>
   </body>

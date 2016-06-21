@@ -1,8 +1,14 @@
 {
   "name": "web-projeto",
   "version": "1.0.0",
-  "description": "Projeto final da disciplina de Programação WEB",
-  "main": "app.js",
+  "description": "Página de Projeto Final de disciplina Programação WEB do CEFET-MG.",
+  "main": "server/app.js",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "flash": "^1.1.0",
+    "md5": "^2.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "node server/app.js"
   },
@@ -10,16 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/gustavojordao/web-projeto.git"
   },
-  "author": "Gustavo Jordão Nunes e Laís Ribeiro Matos Loureiro de Carvalho",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gustavojordao/web-projeto/issues"
   },
-  "homepage": "https://github.com/gustavojordao/web-projeto#readme",
-  "dependencies": {
-    "body-parser": "^1.15.1",
-    "express": "^4.13.4",
-    "express-session": "^1.13.0",
-    "hbs": "^4.0.0"
-  }
+  "homepage": "https://github.com/gustavojordao/web-projeto#readme"
 }

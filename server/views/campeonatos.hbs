@@ -23,43 +23,39 @@
       </form>
     </nav>
     <article class="ladoalado">
-      <section>
-        <table>
-          <thead>
-            <th>Nome</th>
-            <th># de participantes</th>
-            <th>% concluído</th>
-            <th>Vencedor</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Campeonato 1</td>
-              <td>4</td>
-              <td>0</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Campeonato 2</td>
-              <td>8</td>
-              <td>25</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Campeonato 3</td>
-              <td>32</td>
-              <td>100</td>
-              <td>Allejo</td>
-            </tr>
-            <tr>
-              <td>Campeonato 4</td>
-              <td>64</td>
-              <td>50</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-        </table>
+      <section id="campeonatos">
+        <form id="tabela" name="tabela" method="POST">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th># de participantes</th>
+                <th>% concluído</th>
+                <th>Vencedor</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each usuarios}}
+              {{#each campeonatos}}
+                <tr>
+                  <td>{{nome}}</td>
+                  <td>{{num_participantes}}</td>
+                  <td>{{prc_concluido}}</td>
+                  <td>{{vencedor}}</td>
+                  <td>
+                      <div id="view{{@index}}" class="botao view"></div>
+                  </td>
+                </tr>
+              {{/each}}
+              {{/each}}
+              <input id="index" name="index" type="hidden" value=""/>
+            </tbody>
+          </table>
+        </form>
       </section>
     </article>
     <script src="../js/comum.js"></script>
+    <script src="../js/campeonatos.js"></script>
   </body>
 </html>

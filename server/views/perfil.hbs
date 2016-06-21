@@ -9,6 +9,16 @@
     <header>
 		  <img src="../img/logo.png"/> LIBERTADÊRO
     </header>
+    {{#if error}}
+      <section class="messagebar error">
+        {{error}}
+      </section>
+    {{/if}}
+    {{#if success}}
+      <section class="messagebar success">
+        {{success}}
+      </section>
+    {{/if}}
     <nav>
       <form id="menu" name="menu" method="GET">
         <section id="inicial" class="menuitem">
@@ -25,51 +35,45 @@
 
     <article class="ladoalado">
       <section>
-        <img class="avatar" src="../img/allejo.jpg" alt="Avatar"/>
-        Nome: {{nome}} <br/>
-        E-mail: {{email}} <br/>
+        <section>
+          <img class="avatar" src="../img/{{user.id}}.png" alt="Avatar"/>
+        </section>
+        <section>
+          Nome: {{user.nome}} <br/>
+          E-mail: {{user.email}} <br/>
+        </section>
       </section>
 
       <section id="campeonatos">
-        <table>
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th># de participantes</th>
-              <th>% concluído</th>
-              <th>Vencedor</th>
-              <th><img id="botaonovo" class="botao adicionar" src="../img/add.png" alt="Criar campeonato"/></th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each campeonatos}}
-            <tr>
-              <td>{{nome}}</td>
-              <td>{{num_participantes}}</td>
-              <td>{{prc_concluido}}</td>
-              <td>{{vencedor}}</td>
-            </tr>
-            {{/each}}
-            <!--<tr>
-              <td>Campeonato 2</td>
-              <td>8</td>
-              <td>25</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Campeonato 3</td>
-              <td>32</td>
-              <td>100</td>
-              <td>Allejo</td>
-            </tr>
-            <tr>
-              <td>Campeonato 4</td>
-              <td>64</td>
-              <td>50</td>
-              <td>-</td>
-            </tr>-->
-          </tbody>
-        </table>
+        <form id="tabela" name="tabela" method="POST">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th># de participantes</th>
+                <th>% concluído</th>
+                <th>Vencedor</th>
+                <th><div id="add" class="botao add"></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each user.campeonatos}}
+              <tr>
+                <td>{{nome}}</td>
+                <td>{{num_participantes}}</td>
+                <td>{{prc_concluido}}</td>
+                <td>{{vencedor}}</td>
+                <td>
+                    <div id="view{{@index}}" class="botao view"></div>
+                    <div id="edit{{@index}}" class="botao edit"></div>
+                    <div id="delete{{@index}}" class="botao delete"></div>
+                </td>
+              </tr>
+              {{/each}}
+              <input id="index" name="index" type="hidden" value=""/>
+            </tbody>
+          </table>
+        </form>
       </section>
     </article>
     <script src="../js/perfil.js"></script>

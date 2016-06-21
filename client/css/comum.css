@@ -47,14 +47,31 @@ form{
 }
 
 .avatar{
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   float: left;
 }
 
 .botao{
   width: 20px;
   height: 20px;
+  background-image: url(../img/buttons.png);
+}
+
+.add{
+  background-position: 0px 0px;
+}
+
+.delete{
+  background-position: 60px 0px;
+}
+
+.edit{
+  background-position: 40px 0px;
+}
+
+.view{
+  background-position: 20px 0px;
 }
 
 .ladoalado{
@@ -137,4 +154,25 @@ a:visited{
 
 a:link{
   color: green;
+}
+
+.messagebar {
+  background-color: rgba(255, 0, 0, 0.5);
+  border: solid;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.success {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+#tabela{
+  width: 600px;
+}
+
+input[type="hidden"] {
+  display: none;
 }

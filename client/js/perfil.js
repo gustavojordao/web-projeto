@@ -1,46 +1,87 @@
 function init(){
 
   var i;
+  var j;
 
-  var botaonovo;
-  var botoesalterar;
-  var botoesver;
+  var form = document.getElementById('tabela');
+
+  var links = {
+     add: '/adicionarcampeonato',
+     edit: '/editarcampeonato',
+     view: '/vercampeonato',
+     delete: '/deletarcampeonato',
+  };
+
+  var indexhidden = document.getElementById('index');
+
+  var botaoadd = document.getElementById('add');
+  var botaoedit;
+  var botaoview;
+  var botaodelete;
 
   var linhas = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
 
-  var tdbotoes;
 
-  for(i=0; i<linhas.length; i++){
-    tdbotoes = document.createElement('td');
-    tdbotoes.innerHTML = '<img class="botao ver" src="../img/view.png"/><img class="botao alterar" src="../img/edit.png"/>';
-    linhas[i].appendChild(tdbotoes);
-  }
 
-  botaonovo = document.getElementById('botaonovo');
-  botoesalterar = document.getElementsByClassName('botao alterar');
-  botoesver = document.getElementsByClassName('botao ver');
-
-  botaonovo.addEventListener('click',
+  botaoadd.addEventListener('click',
     function(e){
-      window.open("novo-campeonato.html", "_self");
+      form.method = 'POST';
+      form.action = links.add;
+      form.submit();
     }
   );
 
-  for(i=0; i<botoesalterar.length; i++){
-    botoesalterar[i].addEventListener('click',
+  for(i=0; i<linhas.length; i++){
+    botaoedit = document.getElementById('edit'+i);
+    botaoview = document.getElementById('view'+i);
+    botaodelete = document.getElementById('delete'+i);
+
+    botaoview.addEventListener('click',
       function(e){
-        window.open("alterar-campeonato.html", "_self");
+        for(j=0; j<linhas.length; j++){
+          if(e.target.id == 'view'+j){
+            indexhidden.value = j;
+            break;
+          }
+        }
+
+        form.method = 'POST';
+        form.action = links.view;
+        form.submit();
+      }
+    );
+
+    botaoedit.addEventListener('click',
+      function(e){
+        for(j=0; j<linhas.length; j++){
+          if(e.target.id == 'edit'+j){
+            indexhidden.value = j;
+            break;
+          }
+        }
+
+        form.method = 'POST';
+        form.action = links.edit;
+        form.submit();
+      }
+    );
+
+    botaodelete.addEventListener('click',
+      function(e){
+        for(j=0; j<linhas.length; j++){
+          if(e.target.id == 'delete'+j){
+            indexhidden.value = j;
+            break;
+          }
+        }
+
+        form.method = 'POST';
+        form.action = links.delete;
+        form.submit();
       }
     );
   }
 
-  for(i=0; i<botoesver.length; i++){
-    botoesver[i].addEventListener('click',
-      function(e){
-        window.open("ver-campeonato.html", "_self");
-      }
-    );
-  }
 }
 
 init();

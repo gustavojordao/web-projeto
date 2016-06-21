@@ -1,23 +1,64 @@
 function init(){
 
-  //Checkbox de times
+  var i;
+
+  //Select de times
 
   var times = window.document.getElementsByClassName('time');
 
-  for(var i=0; i<times.length; i++){
-    times[i].addEventListener('click',
-      function(e){
-        var divpai = e.target.parentNode.parentNode;
-        if(divpai.id == 'add-times'){
-            document.getElementById('ja-adicionados').appendChild(e.target.parentNode);
-        }
-        else if(divpai.id == 'ja-adicionados'){
-          document.getElementById('add-times').appendChild(e.target.parentNode);
+  var sortear = document.getElementById('sortear');
 
+  var naoadicionados = document.getElementById('naoadicionados');
+  var adicionados = document.getElementById('adicionados');
+
+  var listaNaoAdicionados = [];
+  var listaAdicionados = [];
+
+  for(i=1; i<naoadicionados.length; i++){
+    listaNaoAdicionados.push(naoadicionados.options[i].value);
+  }
+
+  naoadicionados.addEventListener('change',
+    function(e){
+      var option;
+      if(!naoadicionados.options[0].selected){
+        for(i=1; i<naoadicionados.options.length; i++){
+          if(naoadicionados.options[i].selected){
+            option = naoadicionados.options[i];
+            naoadicionados.removeChild(option);
+            option.selected = false;
+            adicionados.appendChild(option);
+            listaNaoAdicionados.splice(i-1, 1);
+            listaAdicionados.push(option.value);
+            naoadicionados.options[0].selected = true;
+            i--;
+            break;
+          }
         }
       }
-    );
-  }
+    }
+  );
+
+  adicionados.addEventListener('change',
+    function(e){
+      var option;
+      if(!adicionados.options[0].selected){
+        for(i=1; i<adicionados.options.length; i++){
+          if(adicionados.options[i].selected){
+            option = adicionados.options[i];
+            adicionados.removeChild(option);
+            option.selected = false;
+            naoadicionados.appendChild(option);
+            listaAdicionados.splice(i-1, 1);
+            listaNaoAdicionados.push(option.value);
+            adicionados.options[0].selected = true;
+            i--;
+            break;
+          }
+        }
+      }
+    }
+  );
 
   //Números de participantes
 
@@ -42,16 +83,51 @@ function init(){
     }
   );
 
+  //Botão Sortear
+
+  /*sortear.addEventListener('click',
+    function(e){
+      var sorteado;
+      var option;
+      for(i=listaAdicionados.length; i<numero.value; i++){
+        sorteado = Math.floor(Math.random()*(listaNaoAdicionados.length));
+        option = naoadicionados.options[sorteado+1];
+        listaAdicionados.push(listaNaoAdicionados[sorteado]);
+        adicionados.appendChild(option);
+        listaNaoAdicionados.splice(sorteado, 1);
+        naoadicionados.removeChild(option);
+        alert('A: '+listaAdicionados + '\nN: '+listaNaoAdicionados);
+      }
+      alert('A: '+listaAdicionados + '\nN: '+listaNaoAdicionados);
+    }
+  );*/
+
   //Botão Criar
   var botaocriar = document.getElementById('botaocriar');
 
+  var formcampeonato = document.getElementById('formcampeonato');
+
   botaocriar.addEventListener('click',
     function(e){
-      var adicionados = document.getElementById('ja-adicionados').getElementsByTagName('input');
-      if(adicionados.length == numero.value){
-        window.open('../html/campeonatos.html', '_self');
+      e.preventDefault();
+      var input;
+      var times = listaAdicionados[0];
+
+      if(listaAdicionados.length == numero.value){
+        for(i=1; i<listaAdicionados.length; i++){
+          times = times + ';' + listaAdicionados[i];
+        }
+        input = document.createElement("input");
+        input.setAttribute("type", "hidden");
+        input.setAttribute("name", "times");
+        input.setAttribute("value", times);
+        formcampeonato.appendChild(input);
+
+        formcampeonato.method = 'POST';
+        formcampeonato.action = '/adicionandocampeonato';
+        formcampeonato.submit();
       }
-      else if(adicionados.length < numero.value){
+      else if(listaAdicionados.length < numero.value){
         alert('Selecione mais times.');
       }
       else{

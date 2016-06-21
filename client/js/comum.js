@@ -1,4 +1,5 @@
 function init(){
+  //alert(window.localStorage.length);
 
   var i;
 
@@ -16,7 +17,8 @@ function init(){
     { id: "perfil", link: "/perfil" },
     { id: "criar-campeonato", link: "/novo-campeonato" },
     { id: "cadastrar", link: "/cadastro" },
-    { id: "botao-login", link: "/login" }
+    { id: "botao-login", link: "/login" },
+    { id: "botao-logout", link: "/logout" }
   ];
 
   for(i=0; i<submenus.length; i++){
@@ -80,38 +82,59 @@ function init(){
 
   var loginform = document.getElementById('loginform');
 
-  botaologin.addEventListener('click',
-    function(e){
-      for(var i=0; i<links.length; i++){
-        if(links[i].id == e.target.id){
-          /*//AJAX
-            var loginRequest = new XMLHttpRequest();
-            loginRequest.onreadysatechange = function(){
-            if(loginRequest.readyState == 4 && loginRequest.status == 200){
+  if(botaologin){
+    botaologin.addEventListener('click',
+      function(e){
+        for(var i=0; i<links.length; i++){
+          if(links[i].id == e.target.id){
+            /*//AJAX
+              var loginRequest = new XMLHttpRequest();
+              loginRequest.onreadysatechange = function(){
+              if(loginRequest.readyState == 4 && loginRequest.status == 200){
 
+              }
             }
+            loginRequest.open('POST', links[i].link, true);
+            loginRequest.send();*/
+            //window.open(links[i].link + '.html', '_self');
+            loginform.method = "POST";
+            loginform.action = links[i].link;
+            loginform.submit();
           }
-          loginRequest.open('POST', links[i].link, true);
-          loginRequest.send();*/
-          //window.open(links[i].link + '.html', '_self');
-          loginform.method = "POST";
-          loginform.action = links[i].link;
-          loginform.submit();
         }
       }
-    }
-  );
+    );
+  }
 
-  botaologout.addEventListener('click',
-    function(e){
-      if(usuario.value && password.value){
-        logadodiv.classList.add('oculto');
-        logindiv.classList.remove('oculto');
-        document.getElementById('usuario').value = '';
-        document.getElementById('password').value = '';
+  if(botaologout){
+    botaologout.addEventListener('click',
+      function(e){
+        /*if(usuario.value && password.value){
+          logadodiv.classList.add('oculto');
+          logindiv.classList.remove('oculto');
+          document.getElementById('usuario').value = '';
+          document.getElementById('password').value = '';
+        }*/
+        for(var i=0; i<links.length; i++){
+          if(links[i].id == e.target.id){
+            /*//AJAX
+              var loginRequest = new XMLHttpRequest();
+              loginRequest.onreadysatechange = function(){
+              if(loginRequest.readyState == 4 && loginRequest.status == 200){
+
+              }
+            }
+            loginRequest.open('POST', links[i].link, true);
+            loginRequest.send();*/
+            //window.open(links[i].link + '.html', '_self');
+            loginform.method = "POST";
+            loginform.action = links[i].link;
+            loginform.submit();
+          }
+        }
       }
-    }
-  );
+    );
+  }
 
 }
 
